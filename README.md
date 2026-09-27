@@ -1,30 +1,25 @@
-# Alt Recon
+Alt Recon
 
-A Bash  reconnaissance automation tool.
+A Bash reconnaissance automation tool.
 
-## Features
-
-- WHOIS lookup
-- DNS enumeration
-- Passive subdomain discovery (Amass)
-- DNS brute force (Gobuster)
-- TLS analysis (testssl.sh)
-
-- Requirements
+Features
+WHOIS lookup
+DNS enumeration
+Passive subdomain discovery (Amass)
+DNS brute force (Gobuster)
+TLS analysis (testssl.sh)
+Requirements
 whois, nslookup, amass, gobuster
 testssl.sh
 A wordlist for Gobuster (e.g. SecLists)
-
-## Usage
+Usage
 
 Default target:
 
-```bash
+bash
 ./recon.sh
-```
 
 Custom target:
 
-```bash
+bash
 ./recon.sh example.com
-```
