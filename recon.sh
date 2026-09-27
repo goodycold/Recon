@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOMAIN=${1:-altschoolafrica.com}
+DOMAIN=${1:-example.com}
 
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 OUTPUT_DIR="scan_${DOMAIN}_${TIMESTAMP}"
@@ -70,7 +70,7 @@ echo "[+] Running DNS Brute Force Enumeration..."
 
 if check_tool gobuster; then
 
-WORDLIST="/usr/share/SecLists-master/Discovery/DNS/subdomains-top1million-5000.txt"
+WORDLIST="${WORDLIST:-/usr/share/SecLists-master/Discovery/DNS/subdomains-top1million-5000.txt}"
 
 if [ -f "$WORDLIST" ]; then
     gobuster dns \
@@ -89,7 +89,7 @@ fi
 
 echo "[+] Running TLS/HTTPS Analysis..."
 
-TESTSSL_PATH="$HOME/testssl.sh/testssl.sh"
+TESTSSL_PATH="${TESTSSL_PATH:-$HOME/testssl.sh/testssl.sh}"
 
 if [ -f "$TESTSSL_PATH" ]; then
     if ! bash "$TESTSSL_PATH" "$DOMAIN" > "$OUTPUT_DIR/tls_report.txt" 2>&1; then
