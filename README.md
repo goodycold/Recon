@@ -10,16 +10,21 @@ A Bash  reconnaissance automation tool.
 - DNS brute force (Gobuster)
 - TLS analysis (testssl.sh)
 
+- Requirements
+whois, nslookup, amass, gobuster
+testssl.sh
+A wordlist for Gobuster (e.g. SecLists)
+
 ## Usage
 
 Default target:
 
 ```bash
-./alt-recon.sh
+./recon.sh
 ```
 
 Custom target:
 
 ```bash
-./alt-recon.sh google.com
+./recon.sh example.com
 ```
