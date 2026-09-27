@@ -1,4 +1,4 @@
-# Alt Recon
+# Recon
 
 A Bash reconnaissance automation tool.
 
